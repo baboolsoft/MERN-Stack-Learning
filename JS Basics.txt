@@ -1,0 +1,83 @@
+JavaScript Basics:
+
+1. Variables
+
+Variables are containers for storing data.  
+1.'var': Function-scoped, redeclarable.  
+2.'let': Block-scoped, re-assignable.  
+3.'const': Block-scoped, cannot be reassigned.  
+
+2. Data Types
+
+JavaScript has two main categories of types:  
+1.Primitive Types: 'string', 'number', 'boolean', 'null', 'undefined', 'symbol', 'bigint'.  
+2.Non-Primitive Types: 'object', 'array', 'function'.  
+
+3. Operators
+
+Operators perform actions on values.  
+1.Arithmetic ('+ - * / % **')  
+2.Assignment ('`= += -= *= /=')  
+3.Comparison ('== != === !== > < >= <=')  
+4.Logical ('&& || !')  
+5.Ternary ('condition ? trueValue : falseValue')  
+
+4. Conditionals
+
+Conditionals control the flow of a program.  
+1.'if', 'else if', 'else'  
+2.'switch' statements  
+3.Ternary operator  
+
+5. Loops
+
+Loops repeat blocks of code.  
+1.'for', 'while', 'do...while' 
+2.'for...of' → for arrays  
+3.'for...in' → for objects  
+
+6. Functions
+
+Functions are reusable blocks of code.  
+Function Declaration ,Function Expression ,Arrow Functions  ,Parameters and Return values  ,Default parameters & Rest parameters. 
+
+7. Arrays
+
+Arrays are ordered collections of elements.  
+1.Creation and Access ('[]')  
+2.Common methods:  
+  'push', 'pop', 'shift', 'unshift'  
+  'map', 'filter', 'reduce', 'forEach', 'find', 'some', 'every' 
+
+8. Objects and JSON
+
+Objects store data in key-value pairs.  
+1.Object creation and property access  
+2.Methods inside objects  
+3.Nested objects  
+4.JSON (JavaScript Object Notation) → Data exchange format  
+
+9. Classes and Objects (OOP Basics)
+
+JavaScript supports Object-Oriented Programming.  
+1.Class syntax ('class')  
+2.Constructor method  
+3.Object creation using 'new'  
+4.Inheritance ('extends', 'super')  
+5.Encapsulation with getters/setters  
+
+10. Error Handling
+
+Errors are handled with try-catch.  
+1.'try...catch' 
+2.'throw' custom errors  
+3.'finally' block  
+
+11. Asynchronous Basics
+
+Understanding asynchronous programming.  
+1.'setTimeout', 'setInterval'  
+2.Callbacks  
+3.Promises ('then', 'catch')  
+4.'async/await'  
+
