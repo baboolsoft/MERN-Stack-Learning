@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .highlight {
+      border: 2px solid red;
+      padding: 5px;
+    }
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    ul {
+      margin-top: 10px;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Original Title</h1>
+
+  <input type="text" id="myInput" placeholder="Type something here" />
+  <input type="checkbox" id="myCheck" /> Checkbox
+
+  <button id="myBtn">Click Me</button>
+  <button id="toggleTheme">Toggle Theme</button>
+  <button id="addItem">Add List Item</button>
+  <button id="clearInput">Clear Input</button>
+
+  <ul id="list">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <!-- Attach your JavaScript file here -->
+  <script src="domfunctions.js"></script>
+</body>
+</html>

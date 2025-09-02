@@ -1,0 +1,18 @@
+JavaScript Advacned:
+
+1. Arrow Functions
+    1. Used as a alternative to direct class or objects with funcitons.
+    2. Can be used in array and normal funcitons
+
+2. Array Advanced:
+    1. map, filter, find, reduce, forEach, some, every, includes.
+    
+3. DOM funcitons
+    1. Selecting elements
+    2. Modifying text, HTML, styles
+    3. Attributes & classes
+    4. Creating/appending/replacing/removing
+    5. Traversing the DOM
+    6. Forms & input handling
+    7. Events with DOM changes
+    8. Cloning & scrolling
