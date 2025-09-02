@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Task Manager</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  
+  <!-- Add Task Section -->
+  <div class="input-section">
+    <div class="input-group">
+      <label for="taskInput">Task Name:</label>
+      <input type="text" id="taskInput" placeholder="Enter your task">
+    </div>
+    
+    <div class="input-group">
+      <label for="categoryInput">Category:</label>
+      <input type="text" id="categoryInput" placeholder="e.g., Work, Personal, Shopping">
+    </div>
+    
+    <button id="addTaskBtn">Add Task</button>
+  </div>
+  
+  <!-- Filter Section -->
+  <div class="filter-section">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+  </div>
+  
+  <!-- Stats Section -->
+  <div class="stats">
+    Total Tasks: <span id="totalCount">0</span> | 
+    Completed: <span id="completedCount">0</span> | 
+    Remaining: <span id="remainingCount">0</span>
+  </div>
+  
+  <!-- Tasks Section -->
+  <div class="tasks-section">
+    <div id="tasksList">
+      <div class="no-tasks">No tasks yet. Add one above!</div>
+    </div>
+  </div>
+
+
+  
+</body>
+</html>
