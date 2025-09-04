@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Card</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Profile Card</h1>
+
+  <section>
+    <label>Name:</label>
+    <input id="nameInput" type="text" placeholder="Enter your name">
+    <br>
+    <label>Bio:</label>
+    <textarea id="bioInput" placeholder="Write a short bio"></textarea>
+    <br>
+    <label>New Hobby:</label>
+    <input id="hobbyInput" type="text" placeholder="Enter hobby">
+    <button id="addHobbyBtn">Add Hobby</button>
+    <br><br>
+    <button id="toggleModeBtn">Toggle Dark Mode</button>
+  </section>
+
+  <hr>
+
+  <div id="profileCard" class="card">
+    <h2 id="profileName">Your Name</h2>
+    <p id="profileBio">Your bio will appear here...</p>
+    <h3>Hobbies</h3>
+    <ul id="hobbyList"></ul>
+  </div>
+</body>
+</html>
