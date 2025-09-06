@@ -15,14 +15,12 @@ function App() {
   const [filter, setFilter] = useState("All");
   const [darkMode, setDarkMode] = useState(false);
 
-  // Filter + Search
   const filteredProducts = products.filter((p) => {
     const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase());
     const matchesFilter = filter === "All" || p.category === filter;
     return matchesSearch && matchesFilter;
   });
 
-  // Add/Remove from cart
   const toggleCart = (product) => {
     if (cart.find((c) => c.id === product.id)) {
       setCart(cart.filter((c) => c.id !== product.id));
@@ -31,7 +29,6 @@ function App() {
     }
   };
 
-  // Update quantity
   const updateQuantity = (id, change) => {
     setCart(
       cart.map((item) =>
@@ -44,7 +41,7 @@ function App() {
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
-      <h1>🛍️ Shopping Catalog</h1>
+      <h1>Shopping <Area:r></Area:r></h1>
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       <SearchBar search={search} setSearch={setSearch} />
       <FilterButtons filter={filter} setFilter={setFilter} />
