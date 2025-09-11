@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "../Components/forminput";
+import API from "../api/api.js";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -8,10 +9,27 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Register: ${name}, ${email}, ${password}`);
-    navigate ("/home");
+    try {
+      const res = await API.post("/register", { name, email, password });
+      console.log("Register Success:", res.data);
+
+      if (res.data.success) {
+        const { data, accessToken } = res.data;
+
+        // Save token for future use
+        localStorage.setItem("accessToken", accessToken);
+
+        alert(`Account created for ${data.username}`);
+        navigate("/home");
+      } else {
+        alert("Registration failed. Try again.");
+      }
+    } catch (err) {
+      console.error("Register Error:", err);
+      alert("Registration failed. Try again.");
+    }
   };
 
   return (

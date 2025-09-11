@@ -1,18 +1,33 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "../Components/forminput.jsx";
-
+import API from "../api/api.js";
 
 const Login = () => {
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(`Login: ${email}, ${password}`);
-    navigate("/home");
+    try {
+      const res = await API.post("/login", { email, password });
+
+      if (res.data.success) {
+        const { data, accessToken } = res.data;
+
+        // Save token for future requests
+        localStorage.setItem("accessToken", accessToken);
+
+        alert(`Welcome back ${data.username || data.email}`);
+        navigate("/home");
+      } else {
+        alert("Login failed. Please check your email/password.");
+      }
+    } catch (err) {
+      console.error("Login Error:", err);
+      alert("Something went wrong. Try again.");
+    }
   };
 
   return (
