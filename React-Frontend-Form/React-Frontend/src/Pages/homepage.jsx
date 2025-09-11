@@ -12,7 +12,7 @@ const HomePage = () => {
         console.log("Employees fetched:", res.data);
 
         if (res.data.success && res.data.Data) {
-          setEmployees(res.data.Data); // backend sends employees in "Date"
+          setEmployees(res.data.Data); // backend sends employees in "Data"
         } else {
           setEmployees([]);
         }
